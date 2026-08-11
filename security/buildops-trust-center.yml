@@ -1,0 +1,52 @@
+generated: '2026-08-10'
+method: searched
+probe: true
+url: https://trust.buildops.com/
+platform: Vanta
+certifications:
+- SOC 2 Type I
+attestations:
+- name: Penetration test certificate
+  issuer: Astra (https://www.getastra.com/)
+  note: BuildOps' security policy states penetration testing is performed annually
+    by an independent assessor.
+reports:
+- name: BuildOps SOC 2 Type I Certificate
+  access: request via trust center
+policies_listed:
+- Human Resource Security Policy
+- Access Control Policy
+- Business Continuity and Disaster Recovery Plan
+- Data Management Policy
+- Incident Response Plan
+control_families:
+- {name: Infrastructure security, controls_listed: 11}
+- {name: Organizational security, controls_listed: 11}
+- {name: Product security, controls_listed: 4}
+- {name: Internal security procedures, controls_listed: 31}
+- {name: Data and privacy, controls_listed: 3}
+subprocessors:
+- {name: Amazon Web Services, role: Cloud provider, region: United States}
+- {name: Okta, role: Identity Provider, region: United States}
+- {name: Payabli, role: Finance and Payments, region: United States}
+- {name: Snowflake, role: Data storage and processing, region: United States}
+contact: security@buildops.com
+security_policy: https://buildops.com/security-policy
+evidence:
+- source: https://trust.buildops.com/
+  http_status: 200
+  keywords: [trust center, compliance, soc 2 type i, penetration testing, controls,
+    subprocessors]
+  note: >-
+    The trust center is a Vanta client-side application; the served HTML is a
+    shell. Contents captured by rendering the page, not by reading the raw HTML.
+    This is why the standard keyword probe (probe-security-programs.py) records
+    no hit against it.
+- source: https://buildops.com/security-policy
+  http_status: 200
+  keywords: [soc 2 type i, encryption, multi-factor authentication, penetration testing,
+    incident response]
+gaps:
+- SOC 2 Type I only; no Type II, ISO 27001, PCI DSS, HIPAA or FedRAMP named.
+- No public status page. The status widget embedded in the Dev Center belongs to
+  Stoplight (kmmfkblgkhnf.statuspage.io = "Stoplight"), not to BuildOps.

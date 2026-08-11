@@ -1,0 +1,29 @@
+generated: '2026-08-10'
+method: searched
+source: https://developer.buildops.com/
+limit_count: 0
+limits: []
+headers: []
+exhaustion_status: null
+note: >-
+  BuildOps publishes no rate limits. The BuildOps Dev Center names a public REST
+  API with webhook callbacks, but the API documentation node
+  (https://developer.buildops.com/docs/buildops-public-api) is marked "Invite
+  Required" and 404s to an unauthenticated visitor, so any published limits,
+  response headers (X-RateLimit-*, RateLimit-*, Retry-After) and 429 semantics
+  sit behind that gate. No limits are stated on the public marketing site, the
+  terms of service, or the one public Dev Center project (Data Dictionary).
+  limit_count 0 records an absence of PUBLIC documentation, not an absence of
+  limits on the API itself.
+evidence:
+- {url: 'https://developer.buildops.com/', http_status: 200}
+- {url: 'https://developer.buildops.com/docs/buildops-public-api', http_status: 404}
+- {url: 'https://public-api.live.buildops.com/', http_status: 200, note: 'live host,
+    returns OK! with no rate-limit headers'}
+observed_headers:
+  url: https://public-api.live.buildops.com/
+  rate_limit_headers_present: false
+  note: >-
+    An unauthenticated GET of the production public API host returns no
+    X-RateLimit-*, RateLimit-* or Retry-After headers, so there is no runtime
+    rate-limit signal an agent could read even without documentation.

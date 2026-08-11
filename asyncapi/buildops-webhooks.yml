@@ -1,0 +1,41 @@
+generated: '2026-08-10'
+method: searched
+source: https://developer.buildops.com/
+spec_type: null
+status: advertised-gated
+asyncapi:
+  published: false
+  probed:
+  - {url: 'https://developer.buildops.com/openapi.json', status: 404}
+  - {url: 'https://developer.buildops.com/asyncapi.yaml', status: 404, note: Stoplight
+      SPA shell}
+event_surface:
+  exists: true
+  kind: webhook-callbacks
+  evidence_quote: >-
+    "The BuildOps API public allows customers to use REST APIs and webhook
+    callbacks to integrate with BuildOps. This solution is best suited when you
+    wish to create a real-time or near real-time workflow with BuildOps."
+  evidence_url: https://developer.buildops.com/
+  catalog_published: false
+  catalog_url: https://developer.buildops.com/docs/buildops-public-api
+  catalog_status: 404
+  gate: >-
+    "Invite Required - Reach out to your IM or CSM to get access to the
+    documentation above."
+events: []
+pointer_decision:
+  emit_webhooks_pointer: false
+  rationale: >-
+    BuildOps states publicly that its API supports webhook callbacks, but
+    publishes no event catalogue, no event names, no payload schemas, no
+    delivery/retry semantics and no signature verification guidance. Nothing an
+    agent or integrator can read describes the event surface. Emitting a
+    Webhooks pointer here would credit a discoverable event surface that does
+    not exist publicly, so the pointer is deliberately withheld. Re-evaluate the
+    moment the Public API project is published to the Dev Center.
+gaps:
+- Publish the webhook event catalogue (event names, payload schemas, delivery and
+  retry semantics, signature verification) at a public URL.
+- An AsyncAPI 3.x document describing those callbacks would make the event surface
+  machine-readable in one file.

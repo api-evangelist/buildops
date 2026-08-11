@@ -1,0 +1,73 @@
+generated: '2026-08-10'
+method: probed
+source: live GET of /.well-known/* on every BuildOps host in apis.yml
+summary:
+  hosts_probed: 4
+  real_documents_found: 0
+  note: >-
+    No BuildOps host serves a real /.well-known/ document. Two hosts
+    (trust.buildops.com, live.buildops.com) answer HTTP 200 for EVERY
+    /.well-known/* path, but the body is the single-page-app HTML shell
+    (Vanta on trust., the BuildOps web client on live.), not a document.
+    Those 200s are catch-all false positives and are recorded here as
+    misses. No WellKnown, SecurityTxt or AgentCard pointer is emitted.
+hosts:
+- host: buildops.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404, document: false}
+  - {path: /.well-known/openid-configuration, status: 404, document: false}
+  - {path: /.well-known/oauth-authorization-server, status: 404, document: false}
+  - {path: /.well-known/oauth-protected-resource, status: 404, document: false}
+  - {path: /.well-known/api-catalog, status: 404, document: false}
+  - {path: /.well-known/ai-plugin.json, status: 404, document: false}
+  - {path: /.well-known/agent-card.json, status: 404, document: false}
+  - {path: /.well-known/agent.json, status: 404, document: false}
+  note: >-
+    Webflow origin returns a custom 404 body ("Invalid .well-known request")
+    for every path under /.well-known/.
+- host: developer.buildops.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404, document: false}
+  - {path: /.well-known/openid-configuration, status: 404, document: false}
+  - {path: /.well-known/oauth-authorization-server, status: 404, document: false}
+  - {path: /.well-known/oauth-protected-resource, status: 404, document: false}
+  - {path: /.well-known/api-catalog, status: 404, document: false}
+  - {path: /.well-known/ai-plugin.json, status: 404, document: false}
+  - {path: /.well-known/agent-card.json, status: 404, document: false}
+  - {path: /.well-known/agent.json, status: 404, document: false}
+  note: Stoplight-hosted Dev Center; returns the SPA shell with a 404 status.
+- host: trust.buildops.com
+  documents:
+  - {path: /.well-known/security.txt, status: 200, document: false, content_type: text/html}
+  - {path: /.well-known/openid-configuration, status: 200, document: false, content_type: text/html}
+  - {path: /.well-known/oauth-authorization-server, status: 200, document: false, content_type: text/html}
+  - {path: /.well-known/oauth-protected-resource, status: 200, document: false, content_type: text/html}
+  - {path: /.well-known/api-catalog, status: 200, document: false, content_type: text/html}
+  - {path: /.well-known/ai-plugin.json, status: 200, document: false, content_type: text/html}
+  - {path: /.well-known/agent-card.json, status: 200, document: false, content_type: text/html}
+  - {path: /.well-known/agent.json, status: 200, document: false, content_type: text/html}
+  note: >-
+    Vanta trust-center SPA answers 200 with an HTML shell for every path.
+    A 200 here is not evidence of a served document.
+- host: live.buildops.com
+  documents:
+  - {path: /.well-known/security.txt, status: 200, document: false, content_type: text/html}
+  - {path: /.well-known/openid-configuration, status: 200, document: false, content_type: text/html}
+  - {path: /.well-known/oauth-authorization-server, status: 200, document: false, content_type: text/html}
+  - {path: /.well-known/oauth-protected-resource, status: 200, document: false, content_type: text/html}
+  - {path: /.well-known/api-catalog, status: 200, document: false, content_type: text/html}
+  - {path: /.well-known/ai-plugin.json, status: 200, document: false, content_type: text/html}
+  - {path: /.well-known/agent-card.json, status: 200, document: false, content_type: text/html}
+  - {path: /.well-known/agent.json, status: 200, document: false, content_type: text/html}
+  note: >-
+    BuildOps web application SPA answers 200 with an HTML shell for every
+    path. Catch-all, not a document.
+gaps:
+- >-
+  BuildOps publishes a security policy at https://buildops.com/security-policy
+  and a security contact (security@buildops.com) but serves no RFC 9116
+  /.well-known/security.txt. Publishing one would make the contact
+  machine-discoverable.
+- >-
+  No /.well-known/api-catalog (RFC 9727) despite operating a Dev Center that
+  names a public REST API.

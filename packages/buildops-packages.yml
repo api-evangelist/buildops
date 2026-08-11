@@ -1,0 +1,40 @@
+generated: '2026-08-10'
+method: searched
+source: npm, PyPI, RubyGems registry search + github.com/BuildHero
+package_count: 0
+official_count: 0
+packages: []
+registries_searched:
+- {registry: npm, query: buildops, result: no first-party package}
+- {registry: pypi, query: buildops, url: 'https://pypi.org/pypi/buildops/json', status: 404}
+- {registry: rubygems, query: buildops, url: 'https://rubygems.org/api/v1/gems/buildops.json',
+  status: 404}
+rejected:
+- name: '@buildops/common'
+  registry: npm
+  version: 1.0.0
+  published: '2026-02-16'
+  official: false
+  reason: >-
+    Name-squat / unrelated. Published by an individual maintainer
+    (kefche1, tzvetanmarinov@yahoo.com) with no description, no repository, no
+    homepage and ISC licence. Nothing ties it to BuildOps the company.
+github_org:
+  url: https://github.com/BuildHero
+  display_name: BuildOps
+  public_repos: 21
+  first_party_libraries: 0
+  note: >-
+    The BuildOps GitHub organisation is real but publishes no first-party client
+    library. Of 21 public repositories, all are forks of third-party projects
+    (WatermelonDB, ckeditor5, hermes, react-native-vision-camera, openfga,
+    nestia, nx-sonarqube, pdftron-react-native, sqlite-android, dbt_semantic_view)
+    maintained for internal use. The one BuildOps-authored description is
+    `secoda-mcp` - "Forked BuildOps version of the Secoda MCP with extra
+    functionality and tools" - which is an internal fork of Secoda's data-catalog
+    MCP server, NOT an MCP server for the BuildOps API. It is deliberately not
+    recorded as an MCPServer pointer.
+note: >-
+  No first-party BuildOps SDK exists in any public registry. Consistent with the
+  API documentation itself being invite-only: there is no public developer
+  surface for an SDK to wrap. No SDKs pointer is emitted.

@@ -1,0 +1,30 @@
+generated: '2026-08-10'
+method: searched
+source: https://www.buildops.com/pricing
+plan_count: 0
+currency: null
+plans: []
+model:
+  billing_unit: per-user
+  billing_note: >-
+    Per-user / per-technician licensing. The published pricing page states the
+    cost per user varies by plan, trades run, modules selected and integrations
+    required.
+  self_serve: false
+  published_prices: false
+  quote_required: true
+  quote_path:
+  - Discovery call
+  - Personalized demo
+  - Custom proposal
+  demo_url: https://www.buildops.com/book-demo
+note: >-
+  BuildOps publishes no priced tiers. The pricing page is an explicit
+  contact-sales page: "BuildOps pricing is tailored to each contractor's
+  operation. There's no one-size-fits-all number." No plan names, no list
+  prices, no included quotas and no overage terms are published, and there is
+  no API-specific pricing or metering disclosed anywhere on the public site.
+  plan_count is 0 because the provider publishes zero plans, not because none
+  were found.
+evidence:
+- {url: 'https://www.buildops.com/pricing', http_status: 200}
