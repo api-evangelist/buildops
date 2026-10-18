@@ -54,6 +54,15 @@ x-docs-platform-checked: 2026-09-21
 tags:
 - Company
 - Construction Software
+- Field Service
+- Contractor Management
+- Commercial Services
+- HVAC
+- ERP Integration
+- CRM
+tags_raw:
+- Company
+- Construction Software
 - Field Service Management
 - Contractor Management
 - Commercial Services
@@ -71,6 +80,10 @@ apis:
   humanURL: https://developer.buildops.com/docs/buildops-public-api
   baseURL: https://public-api.live.buildops.com
   tags:
+  - Field Service
+  - Contractor Management
+  - Construction Software
+  tags_raw:
   - Field Service Management
   - Contractor Management
   - Construction Software
