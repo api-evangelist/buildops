@@ -1,8 +1,8 @@
 generated: '2026-08-10'
 method: searched
 source: https://www.buildops.com/pricing
+name: BuildOps API Plans
 plan_count: 0
-currency: null
 plans: []
 model:
   billing_unit: per-user

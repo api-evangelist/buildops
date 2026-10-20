@@ -1,4 +1,5 @@
 aid: buildops
+
 deliveryModel:
   model: saas
   open_source: false
@@ -10,6 +11,7 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -21,8 +23,11 @@ accessModel:
   source: []
   generated: '2026-07-22'
   method: derived
+
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/buildops.png
+
 name: BuildOps
+
 description: 'BuildOps is an AI-native, all-in-one commercial contractor management
   platform for multi-trade service and construction companies. It unifies project
   management, service operations, dispatch and scheduling, financials and invoicing,
@@ -38,19 +43,32 @@ description: 'BuildOps is an AI-native, all-in-one commercial contractor managem
   Dictionary describing BuildOps datasets on the Dashboard module and a Snowflake private
   share. BuildOps does publish a security policy and a Vanta-hosted Trust Center carrying
   SOC 2 Type I.'
+
 url: https://raw.githubusercontent.com/api-evangelist/buildops/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: vc-portfolio
+
 x-backed-by:
 - founders-fund
-x-tier: stub
-x-tier-reason: portfolio-lead
+
+x-tier: profiled
+
+x-tier-reason: enrichment pass 2026-10-20 (local-v5; was portfolio-lead)
+
 specificationVersion: '0.23'
+
 created: '2026-07-17'
+
 modified: '2026-08-10'
+
 x-docs-platform: stoplight
+
 x-docs-platform-confidence: high
+
 x-docs-platform-checked: 2026-09-21
+
 tags:
 - Company
 - Construction Software
@@ -60,6 +78,7 @@ tags:
 - HVAC
 - ERP Integration
 - CRM
+
 tags_raw:
 - Company
 - Construction Software
@@ -69,6 +88,69 @@ tags_raw:
 - HVAC
 - ERP Integration
 - CRM
+
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+- FN: APIs.json
+  email: info@apis.io
+
+common:
+- type: Webhooks
+  url: asyncapi/buildops-webhooks.yml
+- type: MCPServer
+  url: mcp/buildops-mcp.yml
+- type: Hosts
+  url: hosts/buildops-hosts.yml
+- type: Vendors
+  url: vendors/buildops-vendors.yml
+- type: Newsroom
+  url: https://buildops.com/press
+- type: Website
+  url: https://buildops.com
+- type: DeveloperPortal
+  url: https://developer.buildops.com/
+- type: Integrations
+  url: https://www.buildops.com/platform/integrations
+- type: Pricing
+  url: https://www.buildops.com/pricing
+- type: SignUp
+  url: https://www.buildops.com/book-demo
+- type: Login
+  url: https://live.buildops.com/
+- type: Support
+  url: https://academy.buildops.com/
+- type: TrustCenter
+  url: https://trust.buildops.com/
+- type: TermsOfService
+  url: https://www.buildops.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.buildops.com/privacy-policy
+- type: DomainSecurity
+  url: security/buildops-domain-security.yml
+- type: Documentation
+  name: BuildOps Data Dictionary
+  url: https://developer.buildops.com/docs/data-dictionary/4b402d5ab3edd-build-ops-datasets
+- type: Blog
+  url: https://buildops.com/resources
+- type: GitHubOrganization
+  url: https://github.com/BuildHero
+- type: Security
+  name: BuildOps Security Policy
+  url: https://buildops.com/security-policy
+- type: VulnerabilityDisclosure
+  url: security/buildops-vulnerability-disclosure.yml
+- type: TrustCenter
+  name: Trust center profile
+  url: security/buildops-trust-center.yml
+- type: Compliance
+  name: SOC 2 Type I
+  url: https://trust.buildops.com/
+- type: Plans
+  url: plans/buildops-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/buildops-rate-limits.yml
+
 apis:
 - aid: buildops:public-api
   name: BuildOps Public API
@@ -114,6 +196,7 @@ apis:
       404 bodies are NestJS-shaped ({"statusCode":404,"message":"Cannot GET
       /openapi.json"}), confirming a live application rather than a CDN catch-all.
       No specification is served on any conventional path.
+
 x-contract-discovery:
   checked: '2026-08-10'
   method: probed
@@ -153,65 +236,13 @@ x-contract-discovery:
     JavaScript bundle. They are recorded as evidence that the API estate is real
     and reachable, NOT as documented public endpoints. Only public-api is promoted
     to an apis[] entry, because it is the one the provider itself names as public.
-maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
-- FN: APIs.json
-  email: info@apis.io
-common:
-- type: Website
-  url: https://buildops.com
-- type: DeveloperPortal
-  url: https://developer.buildops.com/
-- type: Integrations
-  url: https://www.buildops.com/platform/integrations
-- type: Pricing
-  url: https://www.buildops.com/pricing
-- type: SignUp
-  url: https://www.buildops.com/book-demo
-- type: Login
-  url: https://live.buildops.com/
-- type: Support
-  url: https://academy.buildops.com/
-- type: TrustCenter
-  url: https://trust.buildops.com/
-- type: TermsOfService
-  url: https://www.buildops.com/terms-of-service
-- type: PrivacyPolicy
-  url: https://www.buildops.com/privacy-policy
-- type: DomainSecurity
-  url: security/buildops-domain-security.yml
-- type: Documentation
-  name: BuildOps Data Dictionary
-  url: https://developer.buildops.com/docs/data-dictionary/4b402d5ab3edd-build-ops-datasets
-- type: Blog
-  url: https://buildops.com/resources
-- type: GitHubOrganization
-  url: https://github.com/BuildHero
-- type: Security
-  name: BuildOps Security Policy
-  url: https://buildops.com/security-policy
-- type: VulnerabilityDisclosure
-  url: security/buildops-vulnerability-disclosure.yml
-- type: TrustCenter
-  name: Trust center profile
-  url: security/buildops-trust-center.yml
-- type: Compliance
-  name: SOC 2 Type I
-  url: https://trust.buildops.com/
-- type: Plans
-  url: plans/buildops-plans-pricing.yml
-- type: RateLimits
-  url: rate-limits/buildops-rate-limits.yml
-- type: Packages
-  url: packages/buildops-packages.yml
-- type: LLMsTxt
-  url: llms/buildops-llms.txt
+
 x-enrichment:
-  date: '2026-08-10'
+  date: '2026-10-20'
   status: minimal
-  artifacts_added: 8
-  pass: local-v1
+  artifacts_added: 0
+  pass: local-v5
+
 x-coverage:
   state: gated
   reason: customer-only-docs
@@ -236,4 +267,4 @@ x-coverage:
     status: 403
   - url: https://public-api.live.buildops.com/openapi.json
     status: 404
-  checked: '2026-08-10'
+  checked: '2026-10-20'

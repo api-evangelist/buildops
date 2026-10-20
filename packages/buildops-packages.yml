@@ -1,5 +1,5 @@
 generated: '2026-08-10'
-method: searched
+method: none
 source: npm, PyPI, RubyGems registry search + github.com/BuildHero
 package_count: 0
 official_count: 0

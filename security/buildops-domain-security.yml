@@ -1,13 +1,24 @@
-generated: '2026-08-10'
+generated: '2026-10-20'
 method: probed
 source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
 hosts:
 - host: buildops.com
   https: true
   tls_version: TLSv1.3
-  cert_expires: Oct 24 11:05:15 2026 GMT
+  cert_expires: Dec 22 13:03:08 2026 GMT
   hsts: true
   hsts_max_age: 31536000
+- host: developer.buildops.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 30 18:35:12 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: public-api.live.buildops.com
+  https: true
+  tls_version: TLSv1.2
+  cert_expires: Mar  8 23:59:59 2027 GMT
+  hsts: false
 domains:
 - domain: buildops.com
   dnssec: true
