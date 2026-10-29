@@ -64,6 +64,122 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-BuildOps is a company surfaced as a portfolio company of founders-fund and added to the API Evangelist network as a stub for enrichment. Sector: construction-software. This profile is a lead awaiting the enrichment pipeline.
+BuildOps is an AI-native, all-in-one commercial contractor management platform for multi-trade service and construction companies. It unifies project management, service operations, dispatch and scheduling, financials and invoicing, and sales/CRM into a single system used by 1,500+ contractors across HVAC, electrical, plumbing, fire safety, and refrigeration trades. Backed by Founders Fund, the company offers pre-built integrations with ERP and accounting systems (QuickBooks, Sage, Vista, Spectrum, NetSuite) plus field-intelligence, payroll, and procurement tools. BuildOps operates a public Dev Center that names a BuildOps Public API offering REST endpoints and webhook callbacks, but that API documentation is marked "Invite Required" and is reachable only through an implementation or customer-success manager. No OpenAPI, AsyncAPI, GraphQL SDL or Postman collection is published anywhere, and no first-party SDK exists in any public registry. The only public Dev Center project is a Data Dictionary describing BuildOps datasets on the Dashboard module and a Snowflake private share. BuildOps does publish a security policy and a Vanta-hosted Trust Center carrying SOC 2 Type I.
 
-Backed by: founders-fund — https://buildops.com
+**Areas:** Company · Construction Software · Field Service Management · Contractor Management · Commercial Services · HVAC · ERP Integration · CRM
+
+## BuildOps on APIs.io
+
+Everything profiled for BuildOps is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/buildops/](https://apis.io/providers/buildops/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [BuildOps Public API](https://apis.io/apis/buildops/public-api/) — The BuildOps Public API, named by the BuildOps Dev Center as the REST + webhook-callback integration surface for customers, software partners and vendors.…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Buildops Webhooks](https://apis.io/asyncapis/buildops/buildops-webhooks/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [buildops](https://apis.io/servers/buildops/buildops/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Buildops Domain Security](https://apis.io/security/buildops/buildops-domain-security/)
+- [Buildops Trust Center](https://apis.io/security/buildops/buildops-trust-center/)
+- [Buildops Vulnerability Disclosure](https://apis.io/security/buildops/buildops-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Buildops Plans Pricing](https://apis.io/plans/buildops/buildops-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Buildops Rate Limits](https://apis.io/rate-limits/buildops/buildops-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://buildops.com)
+- [Documentation](https://developer.buildops.com/docs/data-dictionary/4b402d5ab3edd-build-ops-datasets)
+- [Pricing](https://www.buildops.com/pricing)
+- [Sign up](https://www.buildops.com/book-demo)
+- [Support](https://academy.buildops.com/)
+- [Blog](https://buildops.com/resources)
+- [Security](https://buildops.com/security-policy)
+- [Compliance](https://trust.buildops.com/)
+- [Trust centre](https://trust.buildops.com/)
+- [Terms of service](https://www.buildops.com/terms-of-service)
+- [Privacy policy](https://www.buildops.com/privacy-policy)
+- [GitHub](https://github.com/BuildHero)
+
+## API Evangelist rating
+
+**Kin Score 34.9** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 39.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 60.5 |
+
+**Agent readiness 32.0** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/buildops/](https://apis.io/providers/buildops/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for BuildOps: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/buildops/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
